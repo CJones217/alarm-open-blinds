@@ -19,7 +19,7 @@ sensorValue =  analogRead(sensorPin);
 if(sensorValue>225) {
   Serial.println(sensorValue,  DEC);
   digitalWrite(ledPin,  HIGH); 
-  for(int i=0;i<5;i++){
+  for(int i=0;i<100;i++){
     Serial.println("clockwise");
     myStepper.step(stepsPerRevolution);
     delay(250);
