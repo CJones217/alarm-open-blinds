@@ -17,13 +17,16 @@ void loop(){
 sensorValue =  analogRead(sensorPin);
 
 if(sensorValue>225) {
-  Serial.println(sensorValue,  DEC);
-  digitalWrite(ledPin,  HIGH); 
-  for(int i=0;i<100;i++){
-    myStepper.step(stepsPerRevolution);
-    delay(250);
-  }
-  delay(sensorValue); 
+  delay(250);
+  if(sensorValue>225){
+    Serial.println(sensorValue,  DEC);
+    digitalWrite(ledPin,  HIGH); 
+    for(int i=0;i<100;i++){
+      myStepper.step(stepsPerRevolution);
+      delay(250);
+    }
+    delay(sensorValue);
+  } 
  }
 
 digitalWrite(ledPin,  LOW);
