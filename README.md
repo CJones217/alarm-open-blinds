@@ -2,6 +2,8 @@
 This project was mainly to learn how to use my arduino and the components with it.
 
 I used
+
+
 -stepper motor
 -red led
 -driver board
